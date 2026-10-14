@@ -267,7 +267,7 @@ button,input,select{font:inherit;color:inherit}
 .is-mobile #mblock{display:flex;position:fixed;inset:0;z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px 24px;text-align:center;background:var(--bg-canvas);color:var(--text);font-family:var(--font)}
 #mblock .ic{width:72px;height:72px;border-radius:16px;display:grid;place-items:center;background:var(--bg-brand-subtle);color:var(--brand)}
 #mblock .ic svg{width:36px;height:36px}
-#mblock h1{margin:0;font-size:20px;line-height:30px;font-weight:600;word-break:keep-all;max-width:22em}
+#mblock h1{margin:0;font-size:20px;line-height:30px;font-weight:600;max-width:20em;text-wrap:balance}
 #mblock p{margin:0;font-size:14px;line-height:22px;color:var(--text-2);word-break:keep-all}
 #mblock .brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--text)}
 #mblock button{height:40px;padding:0 16px;border-radius:6px;border:1px solid var(--border);background:var(--bg-surface);color:var(--text);font:500 14px/20px var(--font);cursor:pointer}
@@ -280,11 +280,11 @@ button,input,select{font:inherit;color:inherit}
 <div id="mblock" role="alert">
   <div class="brand"><svg width="24" height="24" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#3341D6"/><path d="M15 9H21.4L25 12.6V17H15C12.79 17 11 15.21 11 13C11 10.79 12.79 9 15 9Z" fill="#fff"/><path d="M11 19H21C23.21 19 25 20.79 25 23C25 25.21 23.21 27 21 27H11V19Z" fill="#B1B7EF"/></svg>SubNote</div>
   <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-  <h1>해당 시뮬레이션은 모바일에서는 작동되지 않습니다.<br>데스크탑에서 확인해주세요.</h1>
-  <p>1600px 이상 데스크탑 브라우저에 최적화된 프로토타입이에요.</p>
-  <button type="button" id="mcopy">링크 복사</button>
+  <h1>This simulation doesn’t work on mobile.<br>Please view it on a desktop.</h1>
+  <p>This prototype is optimized for desktop browsers 1600px and wider.</p>
+  <button type="button" id="mcopy">Copy link</button>
 </div>
-<script>(function(){var b=document.getElementById('mcopy');if(!b)return;b.addEventListener('click',function(){var u=location.href;var done=function(){b.textContent='복사됐어요';setTimeout(function(){b.textContent='링크 복사';},2000);};try{navigator.clipboard.writeText(u).then(done,function(){prompt('링크를 복사하세요',u);});}catch(e){prompt('링크를 복사하세요',u);}});})();</script>
+<script>(function(){var b=document.getElementById('mcopy');if(!b)return;b.addEventListener('click',function(){var u=location.href;var done=function(){b.textContent='Link copied';setTimeout(function(){b.textContent='Copy link';},2000);};try{navigator.clipboard.writeText(u).then(done,function(){prompt('Copy this link',u);});}catch(e){prompt('Copy this link',u);}});})();</script>
 <div class="proto" role="region" aria-label="Prototype controls">
   <b>Prototype</b>
   <div class="grp">
